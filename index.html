@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please fill out the survey form with the required information</p>
+    <form id="survey-form">
+        <div class="form-group">
+            <label id="name-label">Name <input id="name" value="name" placeholder="Enter your name" required> </label>
+        </div>
+        <div class="form-group">
+            <label id="email-label">Email <input id="email" value="email" type="email" placeholder="Enter your email" required>
+            </label>
+        </div>
+        <div class="form-group">
+            <label id="number-label">Age (optional) <input id="age" value="age" type="number" placeholder="Age"> </label>
+        </div>
+        <div class="form-group">
+            <label id="role">Which option best describes your current role?
+                <select id="dropdown" required>
+                    <option value="null" >Select current role</option>
+                    <option value="student" >Student</option>
+                    <option value="Employed part-time" >Employed part-time</option>
+                    <option value="Employed full-time" >Employed full-time</option>
+                    <option value="Prefer not to say" >Prefer not to say</option>
+                    <option value="Other" >Other</option>
+                </select>
+            </label>
+        </div>
+        <div class="form-group">
+            <p>Do you enjoy coding?</p>
+            <label>Definitely <input value="Definitely" name="recommendation" type="radio" checked> </label>
+            <label>Maybe <input value="Maybe" name="recommendation" type="radio" checked> </label>
+            <label>Not sure <input value="Not sure" name="recommendation" type="radio" checked> </label>
+        </div>
+
+        <div class="form-group">
+            <p>Why do you code? <span>(check all that apply)</span></p>
+            <label><input value="School" name="reason" class="input-checkbox" type="checkbox">School</label>
+            <label><input value="Self-interest" name="reason" class="input-checkbox" type="checkbox">Self-interest</label>
+            <label><input value="Work" name="reason" class="input-checkbox" type="checkbox">Work</label>
+            <label><input value="Career Opportunity" name="reason" class="input-checkbox" type="checkbox">Career Opportunity</label>
+            <label><input value="Other" name="reason" class="input-checkbox" type="checkbox">Other</label>
+        </div>
+
+        <div class="form-group">
+            <p>What is your best character trait?</p>
+            <select id="dropdown">
+                <option value="null">Select an option</option>
+                <option value="Optimistic">Optimistic</option>
+                <option value="Resilience">Resilience</option>
+                <option value="Loyalty">Loyalty</option>
+                <option value="Fair">Fair</option>
+                <option value="Kind">Kind</option>
+                <option value="Open-minded">Open-minded</option>
+                <option value="Brave">Brave</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <p>How does your character trait help you with coding?</p>
+            <textarea id="comment" class="text-area" name="comments" placeholder="Resilience helps me with not giving up..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <p>Have you heard of these free coding resources? <span>(check all that apply)</span> </p>
+            <label><input name="resource" value="freeCodeCamp" class="input-checkbox" type="checkbox">freeCodeCamp</label>
+            <label><input name="resource" value="The Odin Project" class="input-checkbox" type="checkbox">The Odin Project</label>
+            <label><input name="resource" value="leetCode" class="input-checkbox" type="checkbox">leetCode</label>
+            <label><input name="resource" value="HackerRank" class="input-checkbox" type="checkbox">HackerRank</label>
+            <label><input name="resource" value="CodeWars" class="input-checkbox" type="checkbox">CodeWars</label>
+            <label><input name="resource" value="None of the above" class="input-checkbox" type="checkbox">None of the above</label>
+        </div>
+
+        <div class="form-group">
+            <button id="submit" type="submit" class="submit-button">Submit</button>
+        </div>
+    </form>
+</body>
+
+</html>
