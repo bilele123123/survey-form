@@ -12,7 +12,7 @@
 <body>
     <h1 id="title">Survey Form</h1>
     <p id="description">Please fill out the survey form with the required information</p>
-    <form id="survey-form">
+    <form id="survey-form" method="post" action="">
         <div class="form-group">
             <label id="name-label">Name <input id="name" value="name" placeholder="Enter your name" required> </label>
         </div>
@@ -21,7 +21,7 @@
             </label>
         </div>
         <div class="form-group">
-            <label id="number-label">Age (optional) <input id="age" value="age" type="number" placeholder="Age"> </label>
+            <label id="number-label">Age (optional) <input id="age" value="age" type="number" min="10" max="120" placeholder="Age"> </label>
         </div>
         <div class="form-group">
             <label id="role">Which option best describes your current role?
@@ -37,9 +37,10 @@
         </div>
         <div class="form-group">
             <p>Do you enjoy coding?</p>
-            <label>Definitely <input value="Definitely" name="recommendation" type="radio" checked> </label>
-            <label>Maybe <input value="Maybe" name="recommendation" type="radio" checked> </label>
-            <label>Not sure <input value="Not sure" name="recommendation" type="radio" checked> </label>
+            <label><input value="Definitely" name="recommendation" type="radio" class="input-checkbox" checked>Definitely </label>
+            <label><input value="Maybe" name="recommendation" type="radio" class="input-checkbox" checked>Maybe </label>
+            <label><input value="Not sure" name="recommendation" type="radio" class="input-checkbox" checked>Not sure </label>
+            <label><input value="No" name="recommendation" type="radio" class="input-checkbox" checked>Not at all </label>
         </div>
 
         <div class="form-group">
